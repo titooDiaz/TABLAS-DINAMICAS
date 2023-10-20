@@ -3,13 +3,14 @@ let dataTableIsInitialized = false;
 
 const dataTableOptions = {
     columnDefs: [
-        { className: "centered", targets: [0, 1, 2, 3, 4, 5, 6] },
-        { orderable: false, targets: [5, 6] },
-        { searchable: false, targets: [0, 5, 6] }
+        { className: "centered", targets: [0, 1, 2, 3, 4, 5, 6] },//columnas PARA APLICAR LAS CLASES CSS
+        { orderable: false, targets: [5, 6] },//columnas PARA APLICAR LAS CLASES CSS
+        { searchable: false, targets: [0, 5, 6] }//columnas PARA APLICAR LAS CLASES CSS
     ],
-    pageLength: 4,
+    pageLength: 4,//pagina 4 en cuatro, *casillas de la tabla*
     destroy: true
 };
+
 
 const initDataTable = async () => {
     if (dataTableIsInitialized) {
@@ -18,8 +19,7 @@ const initDataTable = async () => {
 
     await listProgrammers();
 
-    dataTable = $("#datatable-programmers").DataTable(dataTableOptions);
-
+    dataTable = $("#datatable-programmers").DataTable(dataTableOptions);//ELEMENTOS DE LA BIBLIOTECAA!!!
     dataTableIsInitialized = true;
 };
 
@@ -29,7 +29,7 @@ const listProgrammers = async () => {
         const data = await response.json();
 
         let content = ``;
-        data.programmers.forEach((programmer, index) => {
+        data.programmers.forEach((programmer, index) => {//interaccion con cada programador
             content += `
                 <tr>
                     <td>${index + 1}</td>
@@ -47,12 +47,12 @@ const listProgrammers = async () => {
                     </td>
                 </tr>`;
         });
-        tableBody_programmers.innerHTML = content;
-    } catch (ex) {
+        tableBody_programmers.innerHTML = content;//forma increible de agregar seleciconando el id sin variable!!
+    } catch (ex) {//verifica errores de la pagina
         alert(ex);
     }
 };
 
 window.addEventListener("load", async () => {
-    await initDataTable();
+    await initDataTable();//cuando cargue la pagina llamaremos..
 });
