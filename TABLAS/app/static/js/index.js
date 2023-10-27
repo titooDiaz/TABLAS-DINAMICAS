@@ -34,8 +34,8 @@ const listProgrammers = async () => {
         let content = ``;
         data.programmers.forEach((programmer, index) => {
             content += `
-                <tr>
-                    <td>${index + 1}</td>
+                <tr class="">
+                    <td><i class='fa-solid fa-circle' style='color: green;'></i></td>
                     <td>${programmer.name}</td>
                     <td>${programmer.country}</td>
                     <td>${programmer.birthday}</td>
