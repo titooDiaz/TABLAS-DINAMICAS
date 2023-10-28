@@ -2,11 +2,56 @@ let dataTable;
 let dataTableIsInitialized = false;
 
 const dataTableOptions = {
+    dom: 'Bfrtilp',
+  buttons: [
+    {
+      extend: 'excelHtml5',
+      text: '<i class="fas fa-file-excel"></i> ',
+      titleAttr: 'Exportar a Excel',
+      className: 'btn btn-success',
+    },
+    {
+      extend: 'pdfHtml5',
+      text: '<i class="fas fa-file-pdf"></i> ',
+      titleAttr: 'Exportar a PDF',
+      className: 'btn btn-danger',
+    },
+    {
+      extend: 'print',
+      text: '<i class="fa fa-print"></i> ',
+      titleAttr: 'Imprimir',
+      className: 'btn btn-info',
+    },
+  ],
+  lengthMenu: [5, 10, 15, 20, 100, 200, 500],
     columnDefs: [
         { className: "centered", targets: [0, 1, 2, 3, 4, 5, 6] },
         { orderable: true, targets: [0,1,2,3,4,5,6] },
         { responsivePriority: 1, targets: [0, 1, 2, 3, 4, 5, 6] }
     ],
+
+    language: {
+        processing: 'Procesando...',
+        lengthMenu: 'Mostrar _MENU_ registros',
+        zeroRecords: 'No se encontraron resultados',
+        emptyTable: 'Ningún dato disponible en esta tabla',
+        infoEmpty: 'Mostrando registros del 0 al 0 de un total de 0 registros',
+        infoFiltered: '(filtrado de un total de _MAX_ registros)',
+        search: 'Buscar:',
+        infoThousands: ',',
+        loadingRecords: 'Cargando...',
+        decimal: ',',
+        thousands: '.',
+        info: 'Mostrando _START_ a _END_ de _TOTAL_ registros',
+        paginate: {
+            first: 'Primero',
+            last: 'Último',
+            next: 'Siguiente',
+            previous: 'Anterior',
+            },
+      },
+    
+
     pageLength: 4,
     destroy: true,
     responsive: true,
@@ -35,7 +80,7 @@ const listProgrammers = async () => {
         data.programmers.forEach((programmer, index) => {
             content += `
                 <tr class="">
-                    <td><i class='fa-solid fa-circle' style='color: green;'></i></td>
+                    <td> <i class='fa-solid fa-circle' style='color: green;'></i> ${programmer.id}</td>
                     <td>${programmer.name}</td>
                     <td>${programmer.country}</td>
                     <td>${programmer.birthday}</td>

@@ -17,14 +17,11 @@ def list_programmers(_request):
 def create_programmers(_request):
     for i in range(10):
         Programmer.objects.create(
-            name=f"Nuevo Programador {i}",
-            country="XYZ",
+            name=f"programador {i}",
+            country="ABC",
             birthday="2000-01-01",
             score=i
         )
-
-    # Genera la URL usando reverse
-    create_url = reverse('index')
     
-    # Redirige al usuario a la URL 'create'
-    return HttpResponseRedirect(create_url)
+    # Redirige al usuario a la URL 'create'1
+    return HttpResponseRedirect(reverse('index'))
