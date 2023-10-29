@@ -12,11 +12,8 @@ Para instalar los paquetes necesarios:
 
 <hr/>
 
-![](./preview1.PNG)
 <br/><br/>
-![](./preview2.png)
 <br/><br/>
-![](./preview3.png)
 
 # 🌍🌞🌃✨ Por si deseas contactarme 👨‍💻 :
 
