@@ -30,4 +30,4 @@ Para instalar los paquetes necesarios:
 <br/>
 [![Web](https://img.shields.io/badge/Aun_no_disponible-14a1f0?style=for-the-badge&logo=dev.to&logoColor=white&labelColor=101010)](#)
 <br/>
-[![Email](https://img.shields.io/badge/uskokrum2010@gmail.com-MI_CORREO_PERSONAL-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=101010)](mailto:miguelitodiaz169@gmail.com)
+[![Email](https://img.shields.io/badge/miguelitodiaz169@gmail.com-MI_CORREO_PERSONAL-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=101010)](mailto:miguelitodiaz169@gmail.com)
