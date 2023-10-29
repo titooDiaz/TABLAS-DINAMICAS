@@ -22,38 +22,35 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
     />
+    <!--TAILWIND-->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
     </head>
-    <body>
+    <body class="bg-orange-50">
         <div class="mt-4">
             <div>
                 <div class="flex justify-center">
-                    <div class="overflow-x-hidden flex justify-center m-2">
-                        <table id="datatable-programmers" class="table-auto" style="width: 100%;" >
+                    <div class="overflow-x-hidden m-2">
+                        <table id="datatable-programmers" class="table-auto p-1 border rounded-lg bg-orange-300" style="width: 100%;">
                             <thead>
-                                <tr class="overflow-hidden">
-                                    <th class="hover:bg-blue-300">VER</th>
-                                    <th class="centered">NOMBRE</th>
-                                    <th class="centered">PAIS</th>
-                                    <th class="centered">FECHA NACIMIENTO</th>
-                                    <th class="centered">PUNTAJE</th>
-                                    <th class="centered">EMPLEADO</th>
-                                    <th class="centered">EDITAR</th>
+                                <tr>
+                                    <th class="bg-orange-300 center">VER</th>
+                                    <th class="bg-orange-200 center">NOMBRE</th>
+                                    <th class="bg-orange-300 center">PAIS</th>
+                                    <th class="bg-orange-200 center">FECHA NACIMIENTO</th>
+                                    <th class="bg-orange-300 center">PUNTAJE</th>
+                                    <th class="bg-orange-200 center">EMPLEADO</th>
+                                    <th class="bg-orange-300 center">EDITAR</th>
                                 </tr>
                             </thead>
                             <tbody id="tableBody_programmers"></tbody>
                         </table>
+                        
                     </div>
                 </div>
             </div>

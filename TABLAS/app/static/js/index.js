@@ -8,24 +8,24 @@ const dataTableOptions = {
       extend: 'excelHtml5',
       text: '<i class="fas fa-file-excel"></i> ',
       titleAttr: 'Exportar a Excel',
-      className: 'btn btn-success',
+      className: 'bg-gray-400',
     },
     {
       extend: 'pdfHtml5',
       text: '<i class="fas fa-file-pdf"></i> ',
       titleAttr: 'Exportar a PDF',
-      className: 'btn btn-danger',
+      className: 'bg-gray-400',
     },
     {
       extend: 'print',
       text: '<i class="fa fa-print"></i> ',
       titleAttr: 'Imprimir',
-      className: 'btn btn-info',
+      className: 'bg-gray-400',
     },
   ],
   lengthMenu: [5, 10, 15, 20, 100, 200, 500],
     columnDefs: [
-        { className: "centered", targets: [0, 1, 2, 3, 4, 5, 6] },
+        { className: "cursor-pointer", targets: [0, 1, 2, 3, 4, 5, 6] },
         { orderable: true, targets: [0,1,2,3,4,5,6] },
         { responsivePriority: 1, targets: [0, 1, 2, 3, 4, 5, 6] }
     ],
@@ -79,15 +79,17 @@ const listProgrammers = async () => {
         let content = ``;
         data.programmers.forEach((programmer, index) => {
             content += `
-                <tr class="">
-                    <td> <i class='fa-solid fa-circle' style='color: green;'></i> ${programmer.id}</td>
-                    <td>${programmer.name}</td>
-                    <td>${programmer.country}</td>
-                    <td>${programmer.birthday}</td>
-                    <td>${programmer.score}</td>
-                    <td>${programmer.score >= 8 ? "<i class='fa-solid fa-check' style='color: green;'></i>" : "<i class='fa-solid fa-xmark' style='color: red;'></i>"}</td>
-                    <td>
+                <tr>
+                    <td class="bg-orange-300 p-2"> <i class='fa-solid fa-circle' style='color: green;'></i> ${programmer.id}</td>
+                    <td class="bg-orange-200 p-2">${programmer.name}</td>
+                    <td class="bg-orange-300 p-2">${programmer.country}</td>
+                    <td class="bg-orange-200 p-2">${programmer.birthday}</td>
+                    <td class="bg-orange-300 p-2">${programmer.score}</td>
+                    <td class="bg-orange-200 p-2">${programmer.score >= 8 ? "<i class='fa-solid fa-check' style='color: green;'></i>" : "<i class='fa-solid fa-xmark' style='color: red;'></i>"}</td>
+                    <td class="bg-orange-300 p-2 flex justify-center">
+                        <div class="p-1"></div>
                         <button class='btn btn-sm btn-primary'><i class='fa-solid fa-pencil'></i></button>
+                        <div class="w-2"></div>
                         <button class='btn btn-sm btn-danger'><i class='fa-solid fa-trash-can'></i></button>
                     </td>
                 </tr>`;
