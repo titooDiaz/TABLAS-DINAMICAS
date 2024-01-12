@@ -14,7 +14,7 @@ const dataTableOptions = {
       extend: 'pdfHtml5',
       text: '<i class="fas fa-file-pdf"></i> ',
       titleAttr: 'Exportar a PDF',
-      className: 'bg-gray-400',
+      className: 'bg-gray-300',
     },
     {
       extend: 'print',
@@ -80,13 +80,13 @@ const listProgrammers = async () => {
         data.programmers.forEach((programmer, index) => {
             content += `
                 <tr>
-                    <td class="bg-orange-300 p-2"> <i class='fa-solid fa-circle' style='color: green;'></i> ${programmer.id}</td>
-                    <td class="bg-orange-200 p-2">${programmer.name}</td>
-                    <td class="bg-orange-300 p-2">${programmer.country}</td>
-                    <td class="bg-orange-200 p-2">${programmer.birthday}</td>
-                    <td class="bg-orange-300 p-2">${programmer.score}</td>
-                    <td class="bg-orange-200 p-2">${programmer.score >= 8 ? "<i class='fa-solid fa-check' style='color: green;'></i>" : "<i class='fa-solid fa-xmark' style='color: red;'></i>"}</td>
-                    <td class="bg-orange-300 p-2 flex justify-center">
+                    <td class="p-2"> <i class='fa-solid fa-circle' style='color: green;'></i> ${programmer.id}</td>
+                    <td class="bg-gray-200 p-2">${programmer.name}</td>
+                    <td class="p-2">${programmer.country}</td>
+                    <td class="bg-gray-200 p-2">${programmer.birthday}</td>
+                    <td class="p-2">${programmer.score}</td>
+                    <td class="bg-gray-200 p-2">${programmer.score >= 8 ? "<i class='fa-solid fa-check' style='color: green;'></i>" : "<i class='fa-solid fa-xmark' style='color: red;'></i>"}</td>
+                    <td class="p-2 flex justify-center">
                         <div class="p-1"></div>
                         <button class='btn btn-sm btn-primary'><i class='fa-solid fa-pencil'></i></button>
                         <div class="w-2"></div>
